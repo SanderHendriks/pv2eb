@@ -1,6 +1,6 @@
 {
   "name": "skyb-pv2eb",
-  "version": "0.3.0",
+  "version": "0.3.2",
   "description": "SKYB Administraties sync relaties van PerfectView naar e-Boekhouden",
   "license": "MIT",
   "angular-cli": {},
