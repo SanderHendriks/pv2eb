@@ -1,0 +1,42 @@
+<div class="row client-info"  *ngIf="clt">
+  <table *ngIf="clt">
+    <tr>
+      <th>Veld</th>
+      <th>Waarde</th>
+    </tr>
+    <tr class="client-row">
+      <td>Relation</td>
+      <td>{{clt.DisplayName}}</td>
+    </tr><tr>
+      <td>Postcode</td>
+      <td>{{getField(clt, 'ADR_VIS_postalcode')}}</td>
+    </tr><tr>
+      <td>Nummer KvK</td>
+      <td>{{getField(clt, 'WID_identificationnumber')}}</td>
+    </tr><tr>
+      <td>Vestigingsadres</td>
+      <td>{{getVisitAddress(clt)}}</td>
+    </tr><tr>
+      <td>Postadres</td>
+      <td>{{getPostalAddress(clt)}}</td>
+    </tr><tr>
+      <td>Telnr</td>
+      <td>{{getField(clt, 'COM_phone')}}</td>
+    </tr><tr>
+      <td>email</td>
+      <td>{{getField(clt, 'COM_email')}}</td>
+    </tr><tr>
+      <td>website</td>
+      <td>{{getField(clt, 'COM_website')}}</td>
+    </tr><tr>
+      <td>IBAN</td>
+      <td>{{getField(clt, 'FIN_IBAN')}}</td>
+    </tr><tr>
+      <td>BTWnr</td>
+      <td>{{getField(clt, 'ORG_vatnumber')}}</td>
+    </tr><tr>
+      <td>Contactpersoon + geslacht + aanhef</td>
+      <td>fase 2</td>
+    </tr>
+  </table>
+</div>

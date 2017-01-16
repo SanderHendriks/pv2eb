@@ -1,0 +1,18 @@
+<div layout="col" class="login-form">
+  <div class="userinput" layout="row">
+    <md-input-container class="user-inputs">
+      <label for="user">Email</label>
+      <input md-input type="text" id="user" (keyup.enter)="login()" [(ngModel)]="user">
+    </md-input-container>
+    <md-input-container class="user-inputs">
+      <label for="pw">Wachtwoord</label>
+      <input md-input type="text" id="pw" (keyup.enter)="login()" [(ngModel)]="password">
+    </md-input-container>
+  </div>
+  <div class="buttonrow">
+    <button md-raised-button color="primary" (click)="login()">Login</button>
+  </div>
+  <div layout="row" class="error-row">
+    <span class="error-message" *ngIf="error && error.length > 0">{{error}}</span>
+  </div>
+</div>

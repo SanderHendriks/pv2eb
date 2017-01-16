@@ -1,0 +1,22 @@
+<div class="row" *ngIf="clients.length > 0">
+  <table class="clients-table">
+    <tr>
+      <th>Relatie</th>
+      <!--<th>Info</th>-->
+      <!--<th>IsRoot</th>-->
+      <!--<th>IsDummy</th>-->
+      <th>Inactief ?</th>
+      <!--<th>Type</th>
+      <th>TypeDescription</th>-->
+    </tr>
+    <tr *ngFor="let clt of clients" class="client-row" (click)="selectClient(clt)">
+      <td>{{clt.DisplayName}}</td>
+      <!--<td>{{clt.Info}}</td>-->
+      <!--<td>{{clt.IsRoot}}</td>-->
+      <!--<td>{{clt.IsDummy}}</td>-->
+      <td style="text-align:center">{{clt.IsInactive}}</td>
+      <!--<td>{{getEntityType(clt.EntityTypeId).BaseEntityType}}</td>
+      <td>{{getEntityType(clt.EntityTypeId).DescriptionSingular}}</td>-->
+    </tr>
+  </table>
+</div>

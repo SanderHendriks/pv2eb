@@ -1,0 +1,66 @@
+<div layout="col" class="pv-clients">
+  <div class="userinput" layout="row">
+    <md-input-container class="user-inputs">
+      <label for="sinceDate">Relaties gewijzigd sinds</label>
+      <input md-input type="text" id="sinceDate" (keyup.enter)="firstPage()" [(ngModel)]="sinceDate">
+    </md-input-container>
+  </div>
+
+  <div layout="row">
+    <div class="alert alert-warning" role="alert" *ngIf="clients.length == 0 && error.length == 0">Loading PerfectView clients ...</div>
+  </div>
+  <clientslist [types]="types" [clients]="clients"
+      (onSelectClient)="onSelectClient($event)">
+  </clientslist>
+
+  <div class="buttonrow">
+    <button md-raised-button color="primary" (click)="firstPage()">Eerste Pagina</button>
+    &nbsp;&nbsp;<button md-raised-button color="secondary" (click)="nextPage()">Volgende Pagina</button>
+  </div>
+  <div layout="row" class="error-row">
+    <span class="error-message" *ngIf="error.length > 0">{{error}}</span>
+  </div>
+
+  <client-info [clt]="selectedClient" [fields]="fields">
+  </client-info>
+
+  <!--<table *ngIf="types.length > 0" class="types-table">
+    <tr>
+      <th>Id</th>
+      <th>EntityTypeId</th>
+      <th>BaseEntityType</th>
+      <th>BaseRelationType</th>
+      <th>DescriptionSingular</th>
+    </tr>
+    <tr *ngFor="let t of types" class="types-row">
+      <td>{{t.Id}}</td>
+      <td>{{t.EntityTypeId}}</td>
+      <td>{{t.BaseEntityType}}</td>
+      <td>{{t.BaseRelationType}}</td>
+      <td>{{t.DescriptionSingular}}</td>
+    </tr>
+  </table>-->
+
+  <!--<table *ngIf="fields.length > 0" class="fields-table">
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Label</th>
+      <th>UserFriendlyName</th>
+      <th>Type</th>
+      <!--<th>Lenght</th>
+      <th>IsRequired</th>
+      <th>IsReadOnly</th>-->
+  <!--  </tr>
+    <tr *ngFor="let f of fields" class="fields-row">
+      <td>{{f.Id}}</td>
+      <td>{{f.Name}}</td>
+      <td>{{f.Label}}</td>
+      <td>{{f.UserFriendlyName}}</td>
+      <td>{{f.Type}}</td>
+      <!--<td>{{f.Lenght}}</td>
+      <td>{{f.IsRequired}}</td>
+      <td>{{f.IsReadOnly}}</td>-->
+  <!--  </tr>
+  </table>-->
+</div>

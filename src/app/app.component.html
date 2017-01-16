@@ -1,3 +1,8 @@
-<h1>
-  {{title}}
-</h1>
+<div class="container">
+    <!--<header class="navbar navbar-light navbar-fixed-top navbar-toggleable-md">-->
+    <md-toolbar color="primary">
+      <div class="title">{{title}}</div>
+    </md-toolbar>
+    <app-login *ngIf="! isLoggedIn" (onLogin)="onLogin($event)">Please wait ...</app-login>
+    <PerfectViewClients *ngIf="isLoggedIn">Loading clients...</PerfectViewClients>
+</div>

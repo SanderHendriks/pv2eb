@@ -1,1 +1,77 @@
-/* You can add global styles to this file, and also import other style files */
+.pv-clients:{
+  font-family: sans-serif;
+  font-size: 12px;
+  display: block;
+}
+.navbar{background:#d9534f;}
+.title{color:white;}
+.user-inputs{
+  max-width: 200px;
+  margin-right: 10px;
+}
+.userinput input{
+  padding:4px;
+  font-size: 14px;
+  /*background-color: #f0f0f0;*/
+  line-height: 20px;
+}
+.userinput label{
+  padding:4px;
+  font-size: 10px;
+}
+.error-message{
+  background-color: #ffcccc;
+  color: #d9534f;
+  margin: 10px;
+  padding: 5px;
+  border: 1px solid;
+  border-color: #d9534f;
+  border-radius: 5px;
+}
+/*input[type="text"] {
+  font-family: sans-serif;
+  font-size: 12px;
+  display: block;
+  margin: 10px;
+  padding: 0px;
+  padding-left: 4px;
+  border-bottom: solid 1px #dcdcdc;
+  transition: box-shadow 0.3s, border 0.3s;
+}
+input[type="text"]:focus {
+  outline: none;
+}*/
+.buttonrow{
+  padding:4px;
+  margin-bottom: 20px;
+}
+.clients-table {
+  margin-left: 0;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: 2px solid;
+  border-color: #d9534f;
+  padding: 8px;
+  padding-bottom: 2px;
+}
+.clients-table tr:nth-child(even) {background: #CCC}
+.clients-table tr:nth-child(odd) {background: #FFF}
+.client-info {
+  margin-left: 0;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: 1px solid;
+  border-color: #d9534f;
+  border-radius: 9px;
+  background-color: #ffcccc;
+  padding: 8px;
+}
+th {
+  background-color: #d9534f;
+  padding-left:4px;
+  padding-right:14px;
+  color:white;
+}
+td {
+  padding-left:4px;
+}
